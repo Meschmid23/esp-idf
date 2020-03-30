@@ -845,6 +845,9 @@ esp_err_t uart_wait_tx_idle_polling(uart_port_t uart_num);
   */
 esp_err_t uart_set_loop_back(uart_port_t uart_num, bool loop_back_en);
 
+int uart_available(uart_port_t uart_num);
+
+
 #ifdef __cplusplus
 }
 #endif

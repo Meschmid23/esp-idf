@@ -1542,3 +1542,8 @@ esp_err_t uart_set_loop_back(uart_port_t uart_num, bool loop_back_en)
     uart_hal_set_loop_back(&(uart_context[uart_num].hal), loop_back_en);
     return ESP_OK;
 }
+
+int uart_available(uart_port_t uart_num)
+{
+    return ((p_uart_obj[UART_NUM_1]->xQueueUart) + (p_uart_obj[UART_NUM_1]->rx_stash_len));
+}
